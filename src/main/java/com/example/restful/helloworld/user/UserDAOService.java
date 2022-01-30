@@ -53,4 +53,18 @@ public class UserDAOService {
         }
         return null;
     }
+
+    public User updateUser(int id, User user) {
+
+        for (User updateUser : users) {
+            if (updateUser.getId() == id) {
+                updateUser.setName(user.getName());
+                updateUser.setJoinDate(user.getJoinDate());
+
+                return updateUser;
+            }
+        }
+
+        return null;
+    }
 }

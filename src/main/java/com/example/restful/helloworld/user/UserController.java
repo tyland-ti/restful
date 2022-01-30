@@ -50,4 +50,16 @@ public class UserController {
         }
 
     }
+
+    @PutMapping("/users/{id}")
+    public String updateUser (@PathVariable int id ,@RequestBody User users) {
+
+        User user = service.updateUser(id, users);
+
+        if(user == null) {
+             throw new UserNotFountException(String.format("Update user not Found = %s", id));
+        }
+
+        return String.format("update complete id = %s", id);
+    }
 }
