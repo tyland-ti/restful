@@ -7,7 +7,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-
 @RestController
 @RequiredArgsConstructor
 public class UserController {
@@ -26,6 +25,7 @@ public class UserController {
         if (user == null) {
             throw new UserNotFountException(String.format("ID ('%s) not fount", id));
         }
+
         return user;
     }
 
