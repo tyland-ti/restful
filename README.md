@@ -7,3 +7,6 @@
 
 ### actuator
 - http://localhost:8088/actuator
+
+### h2 console
+- http://localhost:8088/h2-console

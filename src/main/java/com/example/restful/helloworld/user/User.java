@@ -10,6 +10,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Getter
@@ -19,13 +22,16 @@ import java.util.Date;
 //@JsonIgnoreProperties(value = {"password","ssn"})
 @JsonFilter("userInfo")
 @ApiModel(description = "사용자 상세 정보를 위한 도메인 객체")
+@Entity
 public class User {
+
+    @Id
+    @GeneratedValue
     private Integer id;
     @ApiModelProperty(notes = "사용자 이름을 입력해 주세요")
     private String name;
     @ApiModelProperty(notes = "사용자 등록일을 입력해 주세요")
     private Date joinDate;
-    //@JsonIgnore
     private String password;
     @ApiModelProperty(notes = "사용자 주민번호를 입력해 주세요")
     private String ssn;
