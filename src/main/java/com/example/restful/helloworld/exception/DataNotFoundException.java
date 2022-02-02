@@ -1,11 +1,11 @@
-package com.example.restful.helloworld.user;
+package com.example.restful.helloworld.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFountException extends RuntimeException {
-    public UserNotFountException(String message) {
+public class DataNotFoundException extends RuntimeException {
+    public DataNotFoundException(String message) {
         super(message);
     }
 }

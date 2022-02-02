@@ -1,5 +1,6 @@
 package com.example.restful.helloworld.user;
 
+import com.example.restful.helloworld.exception.UserNotFountException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
